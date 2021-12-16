@@ -17,7 +17,7 @@ namespace Collatz
             ConjectureResults results = conj.Calculate(minNum, maxNum);
             watch.Stop();
 
-            Console.WriteLine("Execution time {0}", watch.ElapsedMilliseconds);
+            Console.WriteLine("Execution time {0}ms", watch.ElapsedMilliseconds);
             Console.WriteLine("The longest chain was {0} cycles for the number {1}", results.ChainLength, results.ChainNumber);
         }
     }
