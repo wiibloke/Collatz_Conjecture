@@ -19,24 +19,24 @@ namespace Collatz
             ulong longEnd = (ulong)End;
             int longest = 0;
             uint longestChain = 0;
-            int[] used = new int[End - Start + 2];
+            //int[] used = new int[End - Start + 2];
 
             Parallel.For(Start, End, number =>
             {
                 uint counter = 0;
 
-                if (used[number] == 0)
-                {
+                //if (used[number] == 0)
+                //{
                     ulong workingN = (ulong)number;
                     while (workingN != 1)
                     {
                         if (workingN % 2 != 0)
                         {
                             workingN = workingN * 3 + 1;
-                            if (workingN < longEnd)
-                            {
-                                //used[workingN] = (int)workingN;
-                            }
+                            //if (workingN < longEnd)
+                            //{
+                            //    used[workingN] = (int)workingN;
+                            //}
                         }
                         else
                         {
@@ -45,7 +45,7 @@ namespace Collatz
 
                         counter += 1;
                     }
-                }
+               // }
 
                 if (counter > longestChain)
                 {
